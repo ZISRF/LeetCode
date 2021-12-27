@@ -9,7 +9,10 @@
             this.val = val;
             this.next = next;
         }
-        public static ListNode Sum(ListNode l1, ListNode l2, int delta = 0)
+    }
+    public class Solution
+    {
+        static ListNode Sum(ListNode l1, ListNode l2, int delta = 0)
         {
             if (l1 == null && l2 == null && delta == 0)
                 return null;
@@ -24,12 +27,9 @@
             newNode.next = Sum(l1.next, l2.next, (l1.val + l2.val + delta) / 10);
             return newNode;
         }
-    }
-    public class Solution
-    {
         public ListNode AddTwoNumbers(ListNode l1, ListNode l2)
         {
-            return ListNode.Sum(l1, l2);
+            return Sum(l1, l2);
         }
     }
 }

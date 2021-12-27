@@ -6,9 +6,9 @@ namespace Setup
     {
         static void Main(string[] args)
         {
-            var sln = new Task2.Solution();
+            var sln = new Task4.Solution();
 
-            Console.WriteLine(sln.AddTwoNumbers(null, null));
+            Console.WriteLine(sln.FindMedianSortedArrays(new int[] { 1, 3 }, new int[] { 2, 4 }));
         }
     }
 }
