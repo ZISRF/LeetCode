@@ -6,9 +6,9 @@ namespace Setup
     {
         static void Main(string[] args)
         {
-            var sln = new Task20.Solution();
+            var sln = new Task2.Solution();
 
-            Console.WriteLine(sln.IsValid("()()()"));
+            Console.WriteLine(sln.AddTwoNumbers(null, null));
         }
     }
 }
