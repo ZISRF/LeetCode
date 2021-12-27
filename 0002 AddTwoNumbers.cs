@@ -18,7 +18,7 @@
             else if (l1 == null)
                 return new ListNode((l2.val + delta) % 10, Sum(l1, l2.next, (l2.val + delta) / 10));
             else if (l2 == null)
-                return new ListNode(l1.val + delta, Sum(l1.next, l2, (l1.val + delta) / 10));
+                return new ListNode((l1.val + delta) % 10, Sum(l1.next, l2, (l1.val + delta) / 10));
 
             var newNode = new ListNode((l1.val + l2.val + delta) % 10);
             newNode.next = Sum(l1.next, l2.next, (l1.val + l2.val + delta) / 10);
