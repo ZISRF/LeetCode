@@ -15,9 +15,9 @@
             }
             result *= sign;
 
-            if (result < -(1L << 31))
+            if (result < int.MinValue)
                 return 0;
-            if (result >= (1L << 31))
+            if (result > int.MaxValue)
                 return 0;
             return (int)result;
         }
