@@ -3,8 +3,8 @@
     public class ListNode
     {
         public int val;
-        public ListNode next;
-        public ListNode(int val = 0, ListNode next = null)
+        public ListNode? next;
+        public ListNode(int val = 0, ListNode? next = null)
         {
             this.val = val;
             this.next = next;
@@ -12,7 +12,7 @@
     }
     public class Solution
     {
-        static ListNode Sum(ListNode l1, ListNode l2, int delta = 0)
+        static ListNode? Sum(ListNode? l1, ListNode? l2, int delta = 0)
         {
             if (l1 == null && l2 == null && delta == 0)
                 return null;
@@ -27,7 +27,7 @@
             newNode.next = Sum(l1.next, l2.next, (l1.val + l2.val + delta) / 10);
             return newNode;
         }
-        public ListNode AddTwoNumbers(ListNode l1, ListNode l2)
+        public ListNode? AddTwoNumbers(ListNode l1, ListNode l2)
         {
             return Sum(l1, l2);
         }
